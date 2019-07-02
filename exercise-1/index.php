@@ -16,7 +16,37 @@ class Form{
 
     public function text($nameAttr, $value)
     {
-        return '<input name='.$nameAttr.' value="'.$value.'">';
+        return '<input type="text" name='.$nameAttr.' value="'.$value.'">';
+    }
+
+    public function select()
+    {
+        return '<select>';
+    }
+
+    public function option($value, $text)
+    {
+        return '<option value="'.$value.'">'.$text.'</option>';
+    }
+
+    public function endselect()
+    {
+        return '</select>';
+    }
+
+    public function textarea($rows,$cols,$text)
+    {
+        return '<textarea rows="'.$rows.'" cols="'.$cols.'">'.$text.'</textarea>';
+    }
+
+    public function radio($name,$value,$text)
+    {
+        return '<input type="radio" name="'.$name.'" value="'.$value.'">'.$text.'<br>';
+    }
+
+    public function check($name,$value,$text)
+    {
+        return '<input type="checkbox" name="'.$name.'" value="'.$value.'">'.$text.'<br>';
     }
     
     public function submit($value)
